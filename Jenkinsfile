@@ -6,7 +6,7 @@ pipeline {
                 node { label 'master' }
             }
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                sh 'mvn -X -B -DskipTests clean package'
             }
         }
         stage('Deliver') {
